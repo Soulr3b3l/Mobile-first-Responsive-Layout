@@ -5,37 +5,56 @@
 
 body {
     background-color: rgba(240, 236, 236, 0.45);
-    
+    margin: 0 auto;
+    max-width: 1024px;
 }
 
 /* ----- NAVIGATION ----- */
-.main-nav {
-    display: flex;
-    justify-content: space-around;
-}
-.main-nav ul {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    list-style-type: none;
-}
 
-.main-nav li {
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color: white;
-}
-
-a:link, a:visited {
-    color: #0399FF;
-}
-
-a:hover {
-    color: #FACD6D;
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 a {
     text-decoration: none;
+}
+
+nav {
+    font-family: "Montserrat", Arial, Verdana;
+    font-weight: 400;
+    letter-spacing: .05em;
+    padding: 25px;
+    
+}
+
+h1, .top-nav {
+    color:#0399FF;  
+    text-align: center;
+  }
+  ​
+.top-nav, .top-nav li {
+    width: 100%;
+}
+​
+.top-nav {
+    margin-top: 30px;
+}
+  ​
+.top-nav li {
+    padding: 10px 0;
+    margin: 5px auto;
+}
+
+.top-nav li a {
+    color: #0399FF;
+    border-bottom: 1px solid transparent;
+}
+
+.top-nav li a:hover{
+    color: #FACD6D;
+    border-bottom-color: #0399FF;
+    font-weight: bold;
 }
 
 .profile img {
@@ -48,23 +67,26 @@ a {
     font-size: 1.1875em;
     font-weight: lighter;
     color: grey;
+    align-self: auto;
 }
 
 /* ----- MAIN CONTENT -----*/
 
 
-.main {
+.row-container{
     width: 90%;
     margin: 0 auto;
     text-align: center;
-
 }
 
 .main-content {
-    background-color: white;
+    background-color: rgba(240, 236, 236, 0.45);
+    box-shadow: 5px 3px 25px rgb(255, 202, 58),
+    -5px 3px 25px rgb(255, 202, 58);
     width: 100%;
     margin: auto;
     padding-bottom: 1.5625em;
+    align-self: center;
 }
 
 .main-content h1 {
@@ -96,12 +118,15 @@ a {
     padding: 0px;
 }
 
+
 /* ----- SKILLS -----*/
 
-.skills h2 {
+
+.skills h1 {
     font-style: italic;
     font-weight: lighter;
     text-align: center;
+    color: rgba(41, 39, 39, 0.86);
     text-shadow:  2px 2px 4px grey;
 }
 
@@ -114,8 +139,6 @@ a {
 
 .skills {    
     margin-top: 2.5em;
-    padding-top: 2.5em;
-
 }
 
 .skills ul {
@@ -133,32 +156,42 @@ a {
     margin-bottom: 5px;
     padding: 5px;
     color: #0399FF;
+    text-align: center;
 }
 
 .skills li:hover {
-        color: orange;
-        transform: scale(1.4) rotate(10deg); 
-
+    color: orange;
+    transform:skewY(10deg) scale(1.5);
 }
 
 /* ----- CONTACT ----- */
 
-
 .contact-info {
+    margin-top: 1.5em;
     border-top: 1px solid #0399FF;
-    
 }
 
-.contact-info h2 {
+#contact a {
+    color: #0399FF;
+}
+
+#contact a:hover {
+    color: #FACD6D;
+}    
+
+.contact-info h1 {
     font-style: italic;
     font-weight: lighter;
     text-align: center;
+    color: rgba(41, 39, 39, 0.86);
     text-shadow: 2px 2px 4px grey;
+    margin-top: 1.5em;
 }
 
 .contact-info p {
     font-size: 1.1875em;
     text-align: center;
+    margin-top: 1em;
     margin-bottom: 25px;
     color: grey;
 }
@@ -166,26 +199,38 @@ a {
 
 /* ----- FOOTER -----*/
 
+
 .footer-nav {
     border-top: 1px solid #0399FF;
     padding: 1.5625em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    list-style-type: none;
 }
 
 .footer-nav h3 {
+    font-weight: bold;
     display: inline;
     font-size: 1em;
-    padding-right: 6.7em;
     color: #FACD6D;
 }
 
-.footer-ul {
-    display: none;
+.footer-ul a {
+    color: #0399FF;
+    display: inline;
+    text-decoration: none;
+    font-weight: lighter;
+    padding: .4em;
+}
+
+.footer-ul a:hover {
+    color: #FACD6D;
+    font-weight: bolder;
 }
 
 .top {
+    
     list-style-type: none;
     text-transform: uppercase;
     font-size: smaller;
@@ -197,21 +242,24 @@ a {
 /*-----Media Queries-----*/
 
 
-
 @media (min-width: 768px) {
-    .main-nav .name {
-        margin: 30px 0 10px;
+    .top-nav {
+      margin-top: 0;
     }
-
-    .main-nav ul {
-        display: inline-flex;
-        padding-left: 0px;
-        margin-bottom: 0px;
+    
+    .top-nav li {
+      display: inline-block;
+      width: auto;
+      margin-right: 15px;
+      
     }
-
-    .main-nav li {
-        background-color: inherit;
-        padding-left: 20px;
+    
+    .top-nav li:last-child {
+      margin-right: 0;
+    }
+  ​
+    .top-nav a {
+      color: rgb(182, 178, 178);
     }
 
     .profile {
@@ -276,25 +324,16 @@ a {
 
 
 @media (min-width: 1024px) {
-
-    body {
-        max-width: 1040px;
-        margin: 0 auto;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .main-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1em 1.25em 0 1.25em;
-    }
-
-    .main-nav .name {
-        margin: 0;
-    }
-
-    .main-nav .main-ul {
-        margin: 0;
+    
+    .top-nav, 
+    .top-nav li {
+    width: initial;
+    margin-bottom: 0;
     }
 
     .profile {
