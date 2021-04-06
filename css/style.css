@@ -16,10 +16,6 @@ ul {
     padding-left: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 nav {
     font-family: "Montserrat", Arial, Verdana;
     font-weight: 400;
@@ -28,10 +24,18 @@ nav {
     
 }
 
-h1, .top-nav {
+a {
+    font-weight: bold;
+    color: #0399FF;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.top-nav {
     color:#0399FF;  
     text-align: center;
-  }
+}
   ​
 .top-nav, .top-nav li {
     width: 100%;
@@ -55,7 +59,6 @@ h1, .top-nav {
 .top-nav li a:hover{
     color: #FACD6D;
     border-bottom-color: #0399FF;
-    font-weight: bold;
 }
 
 .profile img {
@@ -228,7 +231,7 @@ h1, .top-nav {
 
 .footer-ul a:hover {
     color: #FACD6D;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .footer-ul {
@@ -257,12 +260,13 @@ h1, .top-nav {
       display: inline-block;
       width: auto;
       margin-right: 15px;
+      
     }
     
     .top-nav li:last-child {
       margin-right: 0;
     }
-  
+  ​
     .top-nav a {
       color: rgb(182, 178, 178);
     }
@@ -331,15 +335,15 @@ h1, .top-nav {
 
 @media (min-width: 1024px) {
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .top-nav, 
     .top-nav li {
-    width: initial;
-    margin-bottom: 0;
+        width: initial;
+        margin-bottom: 0;
     }
 
     .profile {
@@ -352,8 +356,7 @@ h1, .top-nav {
     }
    
    .row-container .card {
-        width: 33%;
-        
+        width: 33%; 
     }
     
     .skills p {
