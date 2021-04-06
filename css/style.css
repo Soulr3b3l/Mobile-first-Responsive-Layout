@@ -49,6 +49,7 @@ h1, .top-nav {
 .top-nav li a {
     color: #0399FF;
     border-bottom: 1px solid transparent;
+    
 }
 
 .top-nav li a:hover{
@@ -67,7 +68,7 @@ h1, .top-nav {
     font-size: 1.1875em;
     font-weight: lighter;
     color: grey;
-    align-self: auto;
+    text-align: center;
 }
 
 /* ----- MAIN CONTENT -----*/
@@ -108,7 +109,7 @@ h1, .top-nav {
 .main-content .card p {
     color: rgba(41, 39, 39, 0.86);
     font-size: 1.125em;
-    padding: 0 16px;
+    padding:  16px;
     text-align: center;
 }
 
@@ -191,7 +192,7 @@ h1, .top-nav {
 .contact-info p {
     font-size: 1.1875em;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 25px;
     color: grey;
 }
@@ -207,6 +208,7 @@ h1, .top-nav {
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
+    background-color: #0399FF;
 }
 
 .footer-nav h3 {
@@ -229,13 +231,17 @@ h1, .top-nav {
     font-weight: bolder;
 }
 
+.footer-ul {
+    display: none;
+}
+
 .top {
-    
     list-style-type: none;
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
     margin-top: 1.1875em;
+    color: #FACD6D;
 }
 
 
@@ -251,13 +257,12 @@ h1, .top-nav {
       display: inline-block;
       width: auto;
       margin-right: 15px;
-      
     }
     
     .top-nav li:last-child {
       margin-right: 0;
     }
-  ​
+  
     .top-nav a {
       color: rgb(182, 178, 178);
     }
@@ -300,7 +305,8 @@ h1, .top-nav {
         padding: 1em 0 3em;
         display: flex;
         flex-direction: row;
-        justify-content: space-between
+        justify-content: space-between;
+        background-color: rgba(240, 236, 236, 0.45);
     }
 
     .footer-ul {
@@ -347,6 +353,7 @@ h1, .top-nav {
    
    .row-container .card {
         width: 33%;
+        
     }
     
     .skills p {
@@ -355,5 +362,9 @@ h1, .top-nav {
 
     .footer-nav {
         padding: 1em;
+    }
+
+    .top {
+        display: none;
     }
 }
